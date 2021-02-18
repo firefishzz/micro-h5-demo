@@ -1,0 +1,79 @@
+@import './normalize.css';
+@import './cover.less';
+
+//过渡效果
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+
+.router-fade-enter-active,
+.router-fade-leave-active {
+  transition: opacity 0.3s;
+}
+.router-fade-enter,
+.router-fade-leave-active {
+  opacity: 0;
+}
+.router-slid-enter-active,
+.router-slid-leave-active {
+  transition: all 0.4s;
+}
+.router-slid-enter,
+.router-slid-leave-active {
+  transform: translate3d(2rem, 0, 0);
+  opacity: 0;
+}
+
+*:not(input, textarea) {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+//通用样式
+body {
+  font-family: 'PingFangSC-Regular', 'PingFang SC', '兰亭黑', 'Helvetica', sans-serif;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+input[type='text'] {
+  outline: none;
+}
+
+input[type='number'] {
+  outline: none;
+}
+
+/* 清除浮动 */
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: block;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+  clear: both;
+}
+
+/* 多行溢出代码 */
+.line-cut-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* 单行溢出 */
+.line-cut {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
