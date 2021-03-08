@@ -3,6 +3,7 @@
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <div class="test_text">one</div>
     <van-button type="default" @click="toAbout">{{ $t('GENERAL.TEST') }}</van-button>
+    <van-button type="default" @click="toNext">前往B应用About</van-button>
     <van-button type="default" @click="handleDialog">弹框</van-button>
     <div>全局字段 {{ testNum }} {{ JSON.stringify(user) }}</div>
     <div class="qr_code_2" ref="qrCodeUrl"></div>
@@ -30,6 +31,9 @@ export default {
       this.$router.push({
         path: '/about'
       })
+    },
+    toNext() {
+      history.pushState(null, null, '/sub-demo-two/about')
     },
     handleDialog() {
       Dialog.alert({
